@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 18:09:49 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/03/25 04:24:54 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/03/23 02:18:41 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/03/23 02:53:07 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef REPLACE_HPP
+#define REPLACE_HPP
 
-Zombie* ZombieHorde(int N, std::string name ) {
-    
-    if (N < 0)
-        exit(1);
-    Zombie *horde = new Zombie[N];
-    for (int i = 0; i < N; i++)
-    {
-        horde[i].setName(name); 
-    }
-    return (horde);
-}
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <sstream>
+
+class Replace {
+    private :
+        std::string filename;
+        std::string s1;
+        std::string s2;
+    public :
+        Replace(std::string filename, std::string s1, std::string s2);
+        ~Replace();
+    void    replace();
+};
+
+#endif

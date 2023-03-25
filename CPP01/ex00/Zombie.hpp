@@ -6,18 +6,19 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 19:23:06 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/03/16 22:43:17 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/03/25 04:19:29 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
-
+ 
 #include <iostream>
 
-class Zombie {
+class Zombie 
+{
     private :
-        std::string name;
+        std::string name; 
         
     public :
         Zombie ();
@@ -25,7 +26,7 @@ class Zombie {
         ~Zombie();
         void    announce(void);
 };
-        Zombie* newZombie( std::string name );
-        void randomChump( std::string name );
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
 
 #endif 

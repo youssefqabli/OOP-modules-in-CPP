@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 18:09:49 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/03/25 04:24:54 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/03/21 01:55:34 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/03/23 02:31:52 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Replace.hpp"
 
-Zombie* ZombieHorde(int N, std::string name ) {
-    
-    if (N < 0)
-        exit(1);
-    Zombie *horde = new Zombie[N];
-    for (int i = 0; i < N; i++)
+
+int main(int ac, char **av)
+{
+    if (ac == 4)
     {
-        horde[i].setName(name); 
+        Replace replace(av[1], av[2], av[3]);
+        replace.replace();
+        return(0);
     }
-    return (horde);
+    else
+    {
+        std::cout<<"Wrong Arguments Number "<<std::endl;
+        return(0);
+    }
 }

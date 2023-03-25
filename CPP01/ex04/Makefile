@@ -6,20 +6,20 @@
 #    By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 19:23:09 by yel-qabl          #+#    #+#              #
-#    Updated: 2023/03/25 04:22:19 by yel-qabl         ###   ########.fr        #
+#    Updated: 2023/03/23 03:03:47 by yel-qabl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ZombieHorde
-CC= c++
-FLAGS=-Wall -Werror -Wextra -std=c++98  
-SRC = main.cpp Zombie.cpp ZombieHorde.cpp
+NAME = Replace
+CC= clang++
+FLAGS=-Wall -Werror -Wextra -std=c++98
+SRC = main.cpp Replace.cpp
 OBJ = $(SRC:%.cpp=%.o)
 RM =rm -rf
 
 all: $(NAME)
 
-$(NAME): $(SRC) Zombie.hpp
+$(NAME): $(SRC)
 	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:

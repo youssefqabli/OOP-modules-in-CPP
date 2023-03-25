@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 18:09:49 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/03/25 04:24:54 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/03/23 17:02:03 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/03/24 04:00:50 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-Zombie* ZombieHorde(int N, std::string name ) {
+int main()
+{
+    Harl    obj;
     
-    if (N < 0)
-        exit(1);
-    Zombie *horde = new Zombie[N];
-    for (int i = 0; i < N; i++)
-    {
-        horde[i].setName(name); 
-    }
-    return (horde);
+    obj.complain("debug");
+    obj.complain("info");
+    obj.complain("warning");
+    obj.complain("error");
+    return(0);
 }
