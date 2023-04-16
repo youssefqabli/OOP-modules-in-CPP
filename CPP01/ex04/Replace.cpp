@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 02:24:57 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/03/23 03:19:24 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/04/05 02:23:34 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ Replace::~Replace() {
 }
 
 void    Replace::replace() {
+    size_t          i;
     std::ifstream   input(this->filename);
     std::ofstream   output;
     std::string     line;
-    std::string     res;
-    size_t          i;
-
-    if (input.fail())
+    std::string     result;
+    
+    if (!input.is_open())
     {
         std::cout<< "Error While Opening File !" << std::endl;
         return;
@@ -45,8 +45,8 @@ void    Replace::replace() {
             line.insert(i, s2);
             i = line.find(s1);
         }
-        res.append(line);
-        res.append("\n");
+        result.append(line);
+        result.append("\n");
     }
     output.open(filename.append(".replace"), std::ios::out);
     if(output.fail())
@@ -55,7 +55,7 @@ void    Replace::replace() {
         input.close();
         return;
     }
-    output << res;
+    output << result;
     input.close();
     output.close();
 }

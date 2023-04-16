@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 17:06:10 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/03/24 03:51:34 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/04/05 20:28:39 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ class Harl {
         ~Harl();
         void    complain(std::string level);   
 };
-
+ 
 #endif

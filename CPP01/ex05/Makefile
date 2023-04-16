@@ -6,20 +6,20 @@
 #    By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 19:23:09 by yel-qabl          #+#    #+#              #
-#    Updated: 2023/03/24 04:02:20 by yel-qabl         ###   ########.fr        #
+#    Updated: 2023/04/05 20:27:52 by yel-qabl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Harl
-CC= clang++
+CC= c++
 FLAGS=-Wall -Werror -Wextra -std=c++98
-SRC = main.cpp Harl.cpp
+SRC = main.cpp Harl.cpp 
 OBJ = $(SRC:%.cpp=%.o)
 RM =rm -rf
 
 all: $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(SRC) Harl.hpp
 	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
