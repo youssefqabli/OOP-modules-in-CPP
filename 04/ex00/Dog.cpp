@@ -5,29 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:20:08 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 21:35:29 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/15 21:37:24 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 02:00:53 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() {
-    std::cout << "Dog constructor called" << std::endl;
     type = "Dog";
+    std::cout << "Dog constructor called" << std::endl;
 };
 
-Dog::Dog(std::string name) {
-    std::cout << "Dog constructor called" << std::endl;
-    type = "Dog";
-    this->name = name;
+Dog::Dog(std::string str) {
+    std::cout << "Dog parametric constructor called " << std::endl;
+     type = str;
 };
-
-Dog::Dog(Brain brain) {
-    std::cout << "Dog brain constructor called" << std::endl;
-    type = "Dog";
-    this->brain = new Brain(brain);
-}
 
 Dog::Dog(Dog const &other) {
     std::cout << "Dog copy constructor called" << std::endl;
@@ -36,25 +29,18 @@ Dog::Dog(Dog const &other) {
 
 Dog &Dog::operator=(const Dog &other) {
     std::cout << "Dog copy assignment operator called" << std::endl;
-    if (this != &other)
-        type = other.type;
-    return *this;
-}
+        type = other.getType();
+        return *this;
+ };
 
-Dog::~Dog() {
-    std::cout << "Dog destructor called" << std::endl;
-	delete brain;
+Dog::~Dog(){
+    std::cout << "Dog destructor called " << std::endl;
 };
 
-void    Dog::makeSound(void) const {
-    std::cout << "Dog: Bark!!" << std::endl;
-}
+void    Dog::makeSound() {
+    std::cout << "Dog making sound <woof woof>" << std::endl;
+};
 
-void   Dog::setBrain(std::string str, int n) {
-    for (int i = 0; i < n; i++)
-        brain->setIdeas(str, n);
-}
-
-Brain   &Dog::getBrain(void) const {
-    return *brain;
+std::string     Dog::getType() const {
+    return type;
 }

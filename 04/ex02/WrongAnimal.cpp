@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:20:18 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 18:20:19 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 18:35:32 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 18:40:36 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,4 @@ std::string WrongAnimal::getType(void) const {
 
 void    WrongAnimal::makeSound(void) const {
     std::cout << "WrongAnimal: Hi!!" << std::endl;
-}
+} 

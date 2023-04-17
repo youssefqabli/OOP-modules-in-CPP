@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:19:56 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 18:19:57 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 18:35:08 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 20:43:46 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,4 @@ void    Brain::printIdeas(int n) {
     for (int i = 0; i < n; i++)
         std:: cout << ideas[i] << std::endl;
 }
+ 

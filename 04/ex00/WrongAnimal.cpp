@@ -5,18 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:20:18 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 18:20:19 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 01:50:38 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 02:49:36 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type("WrongAnimal") {
+WrongAnimal::WrongAnimal() {
+    type = ("WrongAnimal");
     std::cout << "WrongAnimal constructor called" << std::endl;
 };
 
-WrongAnimal::WrongAnimal(std::string name) : type("WrongAnimal"), name(name) {
+WrongAnimal::WrongAnimal(std::string name) : type("WrongAnimal") {
+    type = name;
     std::cout << "WrongAnimal constructor called" << std::endl;
 };
 

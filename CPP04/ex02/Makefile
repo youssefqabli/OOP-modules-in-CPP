@@ -5,12 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/16 18:18:06 by yel-qabl          #+#    #+#              #
-#    Updated: 2023/04/16 18:42:27 by yel-qabl         ###   ########.fr        #
+#    Created: 2023/04/16 18:35:28 by yel-qabl          #+#    #+#              #
+#    Updated: 2023/04/16 18:42:20 by yel-qabl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = EX01
+
+NAME = EX02
 CC= c++
 FLAGS=-Wall -Werror -Wextra -std=c++98
 SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp

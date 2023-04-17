@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:20:08 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 21:35:29 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 18:35:18 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 20:30:45 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,4 @@ void   Dog::setBrain(std::string str, int n) {
 
 Brain   &Dog::getBrain(void) const {
     return *brain;
-}
+} 

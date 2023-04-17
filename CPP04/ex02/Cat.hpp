@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:20:24 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 18:20:25 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 18:35:15 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 18:40:54 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 #include <iostream>
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class WrongCat : public WrongAnimal {
+class Cat : public Animal {
+private:
+    Brain   *brain;
 public:
-    WrongCat();
-    WrongCat(std::string name);
-    WrongCat(WrongCat const &other);
-    WrongCat &operator=(const WrongCat &other);
-    ~WrongCat();
+    Cat();
+    Cat(std::string name);
+    Cat(Brain brain);
+    Cat(Cat const &other);
+    Cat &operator=(const Cat &other);
+    ~Cat();
     
-    std::string getType(void) const;
     void        makeSound(void) const;
+    void        setBrain(std::string str, int n);
+    Brain       &getBrain(void) const;
 };
 
-#endif
+#endif 

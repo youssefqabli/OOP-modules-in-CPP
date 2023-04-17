@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:18:59 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 18:19:00 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 18:20:27 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 20:31:27 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,4 @@ std::string Animal::getType(void) const {
 
 void    Animal::makeSound(void) const {
     std::cout << "Animal: Hi!!" << std::endl;
-}
+} 

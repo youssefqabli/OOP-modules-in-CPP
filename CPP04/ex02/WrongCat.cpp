@@ -5,22 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:20:22 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 18:20:23 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 18:35:38 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 18:40:30 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat() {
-    type = "WrongCat";
     std::cout << "WrongCat constructor called" << std::endl;
+    type = "WrongCat";
 };
 
 WrongCat::WrongCat(std::string name) {
+    std::cout << "WrongCat constructor called" << std::endl;
     type = "WrongCat";
     this->name = name;
-    std::cout << "WrongCat constructor called" << std::endl;
 };
 
 WrongCat::WrongCat(WrongCat const &other) {
@@ -45,4 +45,4 @@ std::string WrongCat::getType(void) const {
 
 void    WrongCat::makeSound(void) const {
     std::cout << "WrongCat: Meow!!" << std::endl;
-}
+} 

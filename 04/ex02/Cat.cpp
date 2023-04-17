@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 18:20:04 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/04/16 21:35:35 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/04/16 18:35:13 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/04/16 21:02:14 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,4 @@ void   Cat::setBrain(std::string str, int n) {
 
 Brain   &Cat::getBrain(void) const {
     return *brain;
-}
+} 
