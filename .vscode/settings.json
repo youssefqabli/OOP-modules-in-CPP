@@ -52,6 +52,8 @@
         "utility": "cpp",
         "fstream": "cpp",
         "sstream": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "filesystem": "cpp",
+        "__functional_03": "cpp"
     }
 }
