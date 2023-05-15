@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 23:22:42 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/14 23:37:25 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/16 00:43:32 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Intern::Intern() {};
 const char *Intern::UnkownFormatException::what() const throw() {
     return "Unkown Form";
 }
+Intern::~Intern() {};
 
 AForm *Intern::makeForm(const std::string &name, const std::string &target) {
     std::string formNames[3] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};

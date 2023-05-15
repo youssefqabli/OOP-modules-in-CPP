@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 22:09:35 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/14 00:06:12 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/16 00:33:33 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void    testShrubberyCreation(void) {
         ShrubberyCreationForm shrubbery("shrubbery");
         shrubbery.beSigned(b1);
         std::cout << shrubbery << std::endl;
-        b1.signAForm(shrubbery);
+        b1.signForm(shrubbery);
         shrubbery.execute(b1);
         shrubbery.execute(b2);
         //b2.executeForm(shrubbery);
@@ -48,7 +48,7 @@ void    testRobotomyRequestForm(void) {
         RobotomyRequestForm robotomy("robotomy");
         robotomy.beSigned(b1);
         std::cout << robotomy << std::endl;
-        b1.signAForm(robotomy);
+        b1.signForm(robotomy);
         robotomy.execute(b1);
         robotomy.execute(b2);
         //b2.executeForm(robotomy);
@@ -71,7 +71,7 @@ void    testPresidentialPardonForm(void) {
         PresidentialPardonForm presidential("presidential");
         presidential.beSigned(b1);
         std::cout << presidential << std::endl;
-        b1.signAForm(presidential);
+        b1.signForm(presidential);
         presidential.execute(b1);
         presidential.execute(b2);
         //b2.executeForm(presidential);

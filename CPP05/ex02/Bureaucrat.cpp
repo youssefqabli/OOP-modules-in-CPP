@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:50:24 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/13 19:59:38 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/16 00:33:09 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void Bureaucrat::decrement(int num) {
     grade += num;
 }
 
-void    Bureaucrat::signAForm(AForm &AForm) {
+void    Bureaucrat::signForm(AForm &AForm) {
     try {
         AForm.beSigned(*this);
         std::cout << this->getName() << " signed " << AForm.getName() <<std::endl;

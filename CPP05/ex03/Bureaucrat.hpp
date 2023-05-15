@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:50:36 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/13 19:57:30 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/16 00:34:13 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class Bureaucrat {
         void        increment(int num);
         void        decrement(int num);
         
-        void        signAForm(AForm &AForm);
+        void        signForm(AForm &AForm);
         void        executeForm(AForm const &form);
 
 };
