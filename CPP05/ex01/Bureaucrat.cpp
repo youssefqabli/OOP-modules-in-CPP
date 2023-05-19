@@ -6,23 +6,23 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:50:24 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/10 00:39:02 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:25:05 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : name("") {};
+Bureaucrat::Bureaucrat() : name("default") , grade(10) {};
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name){
     if (grade < 1)
-        throw std::exception();
+        throw GradeTooHighException();
     else if (grade > 150)
-        throw std::exception();
+        throw GradeTooLowException();
     this->grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other) {
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.getName()) {
     *this = other;
 }
 
@@ -35,11 +35,11 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other) {
 Bureaucrat::~Bureaucrat() {};
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-    return "The Grade Is Higher Than 1";
+    return "The Grade Is Lower Than 150";
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-    return "The Grade Is Lower than 150";
+    return "The Grade Is Higher than 1";
 }
 
 
@@ -53,13 +53,13 @@ int Bureaucrat::getGrade() const {
 
 void Bureaucrat::increment(int num) {
     if ((grade - num) < 1)   
-        throw std::exception();
+        throw GradeTooHighException();
     grade -= num;
 }
 
 void Bureaucrat::decrement(int num) {
     if ((grade + num) > 150)
-         throw std::exception();
+         throw GradeTooLowException();
     grade += num;
 }
 

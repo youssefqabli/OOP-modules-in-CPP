@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 00:32:59 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/10 00:40:23 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:49:50 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ class Form {
     int                 getGradeExecute() const;
     
     void                beSigned(Bureaucrat bureaucrat);
-    void                signForm(Bureaucrat bureaucrat);
 };
 
 std::ostream &operator<<(std::ostream &out, const Form &Form);

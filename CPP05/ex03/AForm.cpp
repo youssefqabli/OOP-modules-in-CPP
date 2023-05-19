@@ -12,10 +12,10 @@
 
 #include "AForm.hpp"
 
-AForm::AForm() : name(""), gradeSigned(0), gradeExecute(0) {};
+AForm::AForm() : name(""), isSigned(false), gradeSigned(0), gradeExecute(0) {};
 
 AForm::AForm(const std::string name, const int gradeSigned, const int gradeExecute) : 
-    name(name), gradeSigned(gradeSigned), gradeExecute(gradeExecute) {
+    name(name), isSigned(false), gradeSigned(gradeSigned), gradeExecute(gradeExecute) {
         if (gradeSigned > 150 || gradeExecute > 150)
             throw GradeTooLowException() ;
         else if (gradeSigned < 1 || gradeExecute  < 1)

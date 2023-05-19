@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 22:09:35 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/11 12:28:27 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:42:38 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 void HighValueTest() {
     try {
     std::cout << "--------------------------- High Value Test ----------------------" << std::endl;
-    std::cout << "inputs: \n " << std::endl;
-        Form obj("high_test", 0, 0);
+        Form obj("paper", 0, 0);
     }
     catch(const std::exception &e) {
         std::cout << e.what() << std::endl;
@@ -27,7 +26,7 @@ void HighValueTest() {
 void LowVlaueTest() {
     try {
     std::cout << "--------------------------- Low Value Test ----------------------" << std::endl;
-        Form obj("low_test", 190, 190);
+        Form obj("paper", 190, 190);
     }
     catch (const std::exception &e) {
         std::cout << e.what() << std::endl;
@@ -37,8 +36,8 @@ void LowVlaueTest() {
 void SignTest() {
     try {
     std::cout << "--------------------------- Successful Signed Test ----------------------" << std::endl;
-        Bureaucrat B_obj("B_signed_succes", 10);
-        Form F_obj("F_signed_success",60 ,70);
+        Bureaucrat B_obj("youssef", 10);
+        Form F_obj("paper",60 ,70);
         B_obj.signForm(F_obj);
         std::cout << F_obj<< std::endl;
         
@@ -51,9 +50,9 @@ void SignTest() {
 void    FailedSignTest() {
     try {
     std::cout << "--------------------------- Failed Signed Test ----------------------" << std::endl;
-        Bureaucrat B_obj("B_sign_fail", 40);
-        Form F_obj("F_sign_fail", 20, 30);
-        //F_obj.beSigned(B_obj);
+        Bureaucrat B_obj("youssef", 40);
+        Form F_obj("paper", 20, 30);
+        F_obj.beSigned(B_obj);
         B_obj.signForm(F_obj);
         std::cout << F_obj << std::endl;
     }

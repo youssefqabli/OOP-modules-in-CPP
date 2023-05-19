@@ -6,13 +6,13 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:50:24 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/07 00:21:40 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:48:42 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : name("") {};
+Bureaucrat::Bureaucrat() : name("default") , grade(10) {};
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name){
     if (grade < 1)
@@ -35,13 +35,12 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other) {
 Bureaucrat::~Bureaucrat() {};
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-    return "The Grade Is Higher Than 1";
+    return "The Grade Is Too Low";
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-    return "The Grade Is Lower than 150";
+    return "The Grade Is Too High";
 }
-
 
 std::string Bureaucrat::getName() const {
     return name;
@@ -53,13 +52,13 @@ int Bureaucrat::getGrade() const {
 
 void Bureaucrat::increment(int num) {
     if ((grade - num) < 1)   
-        throw std::exception();
+        throw GradeTooHighException();
     grade -= num;
 }
 
 void Bureaucrat::decrement(int num) {
     if ((grade + num) > 150)
-         throw std::exception();
+         throw GradeTooLowException();
     grade += num;
 }
 

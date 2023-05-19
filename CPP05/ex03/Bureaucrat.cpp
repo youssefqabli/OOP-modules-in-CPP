@@ -6,21 +6,22 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:50:24 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/16 00:34:25 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:25:29 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : name("") {};
+Bureaucrat::Bureaucrat() : name("default") , grade(10) {};
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name){
     if (grade < 1)
-        throw std::exception();
+        throw GradeTooHighException();
     else if (grade > 150)
-        throw std::exception();
+        throw GradeTooLowException();
     this->grade = grade;
 }
+
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other) {
     *this = other;
@@ -35,11 +36,11 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other) {
 Bureaucrat::~Bureaucrat() {};
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-    return "The Grade Is Higher Than 1";
+    return "The Grade Is Lower Than 150";
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-    return "The Grade Is Lower than 150";
+    return "The Grade Is Higher than 1";
 }
 
 
