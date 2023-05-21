@@ -6,13 +6,20 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:26:43 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/19 13:29:41 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/21 01:50:26 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef SCALARCONVERTER_HPP
+#define SCALARCONVERTER_HPP
 
 #include <iostream>
 
 class ScalarConverter {
     public :
-        void    convert(std::string input);
+        
+        static void    convert(std::string input);
+        
 };
+
+#endif
