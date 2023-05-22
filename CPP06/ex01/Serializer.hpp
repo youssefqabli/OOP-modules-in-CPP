@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 14:06:14 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/21 18:05:04 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/05/21 19:11:42 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/05/21 20:13:07 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef SERIALIZER_HPP
+#define SERIALIZER_HPP
+
 #include <iostream>
 
-int main (int ac, char *av[]) {
-  if (ac == 1){
-    std::cout << "Error: no arguments" << std::endl;
-    return 1;
-  }
-  ScalarConverter::convert(av[1]);
+typedef struct test_data {
+    int     value;
+} Data;
 
-}
+class Serializer {
+  public : 
+    static uintptr_t serialize(Data* ptr);
+    static Data* deserialize(uintptr_t raw);  
+};
+
+#endif

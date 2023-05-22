@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   C.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 14:06:14 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/21 18:05:04 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/05/22 01:28:15 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/05/22 01:28:24 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
-#include <iostream>
+#ifndef C_HPP
+#define C_HPP
 
-int main (int ac, char *av[]) {
-  if (ac == 1){
-    std::cout << "Error: no arguments" << std::endl;
-    return 1;
-  }
-  ScalarConverter::convert(av[1]);
+#include "Base.hpp"
 
-}
+class C: public Base {};
+
+#endif
