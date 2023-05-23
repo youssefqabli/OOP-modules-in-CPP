@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:26:43 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/21 01:50:26 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/23 01:18:36 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define SCALARCONVERTER_HPP
 
 #include <iostream>
+#include <cstdio>
+#include <limits>
+#include <cmath>
 
 class ScalarConverter {
     public :
