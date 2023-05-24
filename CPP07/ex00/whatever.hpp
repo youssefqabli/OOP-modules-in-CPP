@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 14:06:14 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/23 16:27:39 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/05/24 00:38:25 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/05/24 00:53:14 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
+
 #include <iostream>
 
-int main (int ac, char *av[]) {
-  if (ac != 2){
-    std::cout << "Error: no arguments" << std::endl;
-    return 1;
-  }
-  ScalarConverter::convert(av[1]);
-
+template <typename T>
+void swap(T &a, T &b) {
+    T tmp;
+    tmp = a;
+    a = b;
+    b = tmp;
 }
+
+template <typename T>
+T min(T &a, T &b) {
+    if (a < b) 
+        return a;
+    else
+        return b;
+}
+
+template <typename T>
+T max(T &a, T &b) {
+    if (a > b)
+        return a;
+    else 
+        return b;
+}
+
+#endif

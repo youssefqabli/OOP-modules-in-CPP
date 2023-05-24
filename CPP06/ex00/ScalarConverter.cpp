@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:29:55 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/23 01:46:30 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:45:10 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void    ScalarConverter::convert(std::string str) {
         impossible();
     if (str[str.length() -1] != 'f' && isalpha(str[str.length() -1]) == 1 ) 
         impossible();
+
     
     to_int = std::atoi(str.c_str());
     
