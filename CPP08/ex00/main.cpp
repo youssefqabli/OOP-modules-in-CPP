@@ -5,25 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 00:49:57 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/24 22:52:43 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/05/25 22:27:55 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/05/26 00:37:18 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#include "easyfind.hpp"
 
-int main( void ) {
-int a = 2;
-int b = 3;
-::swap( a, b );
-std::cout << "a = " << a << ", b = " << b << std::endl;
-std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-std::string c = "chaine1";
-std::string d = "chaine2";
-::swap(c, d);
-std::cout << "c = " << c << ", d = " << d << std::endl;
-std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-return 0;
+int main () {
+    std::vector<int> vec;
+    std::vector<int>::iterator iter; 
+
+    for (size_t i = 0; i < 100; i++) {
+        vec.push_back(i);
+    }
+    iter = easyfind(vec, 65);
+    std::cout << "the occurence found at index : "<< *iter << std::endl;
+    iter = easyfind(vec, 3);
 }

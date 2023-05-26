@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 00:54:56 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/24 03:02:22 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/24 22:07:03 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    print(const P &arg)
 }
 
 template<typename T>
-void iter (T *arr, int_fast16_t len, void (* func)(const T &)){
+void iter (T *arr,int len, void (* func)(const T &)){
     for (int i = 0; i < len; i++) {
         func(arr[i]);
     }
