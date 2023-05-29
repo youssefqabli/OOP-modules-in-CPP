@@ -5,28 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/25 22:27:55 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/29 18:51:25 by yel-qabl         ###   ########.fr       */
+/*   Created: 2023/05/28 01:07:29 by yel-qabl          #+#    #+#             */
+/*   Updated: 2023/05/29 01:38:54 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
+#include "MutantStack.hpp"
 
-int main () {
+int main() {
+
+
+    MutantStack<int> mstack;
     
-    try {
-        
-    std::vector<int> vec;
-    std::vector<int>::iterator iter; 
-
-    for (size_t i = 0; i < 100; i++) {
-        vec.push_back(i);
+    mstack.push(5);
+    mstack.push(17);
+    std::cout << mstack.top() << std::endl;
+    mstack.pop();
+    std::cout << mstack.size() << std::endl;
+    mstack.push(3);
+    mstack.push(5);
+    mstack.push(737);
+    mstack.push(0);
+    MutantStack<int>::iterator it = mstack.begin();
+    MutantStack<int>::iterator ite = mstack.end();
+    ++it;
+    --it;
+    while (it != ite)
+    {
+    std::cout << *it << std::endl;
+    ++it;
     }
-    iter = easyfind(vec, 605);
-    std::cout << "the occurence found at index : "<< *iter << std::endl;
-    iter = easyfind(vec, 3);
-    }
-    catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
-    }
+    std::stack<int> s(mstack);
+    
 }

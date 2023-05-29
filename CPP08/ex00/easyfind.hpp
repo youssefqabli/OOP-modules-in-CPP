@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 22:13:53 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/25 22:41:30 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:49:01 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@
 #include <vector>
 
 
-class NoOccurenceException : public std::exception {
-    public : 
-        virtual const char *what() const throw() {
-            return "no occurence found!";
-        }
-};
 
 template<typename T>
 typename T::iterator easyfind(T &src, int i) {
@@ -32,7 +26,7 @@ typename T::iterator easyfind(T &src, int i) {
 
     iter = find(src.begin(), src.end(), i);
     if (iter == src.end())
-        throw (NoOccurenceException());
+        throw (std::out_of_range("no occurence found!"));
     return iter;
 } 
 
