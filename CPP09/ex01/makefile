@@ -6,19 +6,19 @@
 #    By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 16:48:02 by yel-qabl          #+#    #+#              #
-#    Updated: 2023/05/30 23:48:49 by yel-qabl         ###   ########.fr        #
+#    Updated: 2023/05/31 21:51:56 by yel-qabl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = btc
+NAME = RPN
 CC= c++
 FLAGS=-Wall -Werror -Wextra -std=c++98
-SRC = main.cpp  BitcoinExchange.cpp
+SRC = main.cpp  RPN.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC) BitcoinExchange.hpp
+$(NAME): $(SRC) RPN.hpp
 	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:

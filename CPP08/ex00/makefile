@@ -6,7 +6,7 @@
 #    By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 16:48:02 by yel-qabl          #+#    #+#              #
-#    Updated: 2023/05/25 22:27:33 by yel-qabl         ###   ########.fr        #
+#    Updated: 2023/05/30 20:48:13 by yel-qabl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,4 +27,4 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
+re: fclean 

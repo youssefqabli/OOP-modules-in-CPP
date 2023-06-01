@@ -66,6 +66,10 @@
         "utility": "cpp",
         "vector": "cpp",
         "__cxx_version": "cpp",
-        "memory_resource": "cpp"
+        "memory_resource": "cpp",
+        "__tree": "cpp",
+        "csignal": "cpp",
+        "list": "cpp",
+        "map": "cpp"
     }
 }
