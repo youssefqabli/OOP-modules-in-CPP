@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 19:55:00 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/31 23:22:47 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/06/01 22:47:33 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,7 @@ BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &other) {
     return *this;
 }
 
-void    BitcoinExchange::printDictionary() {
-    std::map <std::string, float>::iterator iter;
-    for (iter = this->Dictionary.begin(); iter != this->Dictionary.end(); ++iter) {
-        std::cout << iter->first << " : " <<iter->second << std::endl;
-    }
-    
-    std::cout << "size of conatiner: " << Dictionary.size() << std::endl;
-}
+
 
 void    BitcoinExchange::printResult() {
     char            buffer[1024];
@@ -78,6 +71,7 @@ void    BitcoinExchange::printResult() {
         std::cerr << "invalid column nmaing" << buffer <<std::endl;
         exit(1);
     }
+    
     
     while (input.getline(buffer,1024)) 
     {
@@ -96,24 +90,6 @@ void    BitcoinExchange::printResult() {
             }
         }
         
-/**************************************************/
-        
-        // std::cout << buff << std::endl;
-        // std::string c  = "012345679.|-";
-
-        //  for (std::size_t i = 0; i < buff.length(); i++) 
-        //  {
-        //     for (std::size_t j = 0; j < c.length(); j++) 
-        //     {
-        //         if (buff[i] == c[j])
-        //         {
-        //         }
-        //             break;
-        //     }
-        //     break;
-        //  }
-        
-/****************************************************/
         
         if (buff.find("|") == std::string::npos) { 
             std::cout << "invalid input: " << buff <<std::endl;
@@ -130,7 +106,10 @@ void    BitcoinExchange::printResult() {
             dateString = Date;
             
             char *charDigit = strtok(NULL, "|");
+
+
             digitString = charDigit;
+            
 
             if (charDigit == NULL || Date == NULL)
             {
@@ -150,6 +129,8 @@ void    BitcoinExchange::printResult() {
 
         s_digit << digitString;
         s_digit >> Digit;
+
+
         
         if (s_digit.fail() == true)
         {

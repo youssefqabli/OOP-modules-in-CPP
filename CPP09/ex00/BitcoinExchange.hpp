@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 01:27:02 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/05/31 01:25:34 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:06:27 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ class BitcoinExchange {
         BitcoinExchange(const BitcoinExchange &other);
         BitcoinExchange &operator=(const BitcoinExchange &other);
         
-        void    printDictionary();
         void    printResult();
         
         
