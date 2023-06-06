@@ -6,7 +6,7 @@
 /*   By: yel-qabl <yel-qabl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 23:09:44 by yel-qabl          #+#    #+#             */
-/*   Updated: 2023/06/05 01:11:44 by yel-qabl         ###   ########.fr       */
+/*   Updated: 2023/06/05 18:59:34 by yel-qabl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ double bench_container(T &c)
 	double elapsed = 1000000.0 * (end - start) / CLOCKS_PER_SEC;
 	return elapsed;
 }
+
 
 
 int main(int argc, char *argv[])
